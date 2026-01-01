@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year</title>
+
+<style>
+    body{
+        margin:0;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background: linear-gradient(135deg, #1d2671, #c33764);
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 0.5s;
+    }
+
+    h1{
+        font-size:60px;
+        color:#fff;
+        animation: fadeIn 1.5s ease;
+        margin-bottom:20px;
+    }
+
+    p{
+        color:#f1f1f1;
+        font-size:20px;
+        margin-bottom:30px;
+    }
+
+    button{
+        font-size:18px;
+        padding:10px 25px;
+        border:none;
+        border-radius:25px;
+        cursor:pointer;
+        margin:5px;
+        transition:0.3s;
+    }
+
+    #dark{
+        background:#000;
+        color:#fff;
+    }
+
+    #light{
+        background:#fff;
+        color:#000;
+    }
+
+    button:hover{
+        transform: translateY(-3px);
+        box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+    div{
+    display:flex;
+    gap:10px;
+}
+
+@media (max-width: 600px) {
+    div{
+        flex-direction:column;
+        align-items:center;
+        padding-bottom: 250px;
+    }
+}
+/* Tablets (max width 992px) */
+@media (max-width: 992px) {
+    h1{
+        font-size:45px;
+        text-align:center;
+    }
+
+    p{
+        font-size:18px;
+        text-align:center;
+        padding: 0 20px;
+    }
+
+    button{
+        font-size:16px;
+        padding:10px 22px;
+    }
+}
+
+/* Mobile devices (max width 600px) */
+@media (max-width: 600px) {
+    h1{
+        font-size:32px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    button{
+        width:100%;
+        max-width:220px;
+        margin:8px 0;
+    }
+}
+
+
+    @keyframes fadeIn {
+        from{
+            opacity:0;
+            transform:scale(0.9);
+        }
+        to{
+            opacity:1;
+            transform:scale(1);
+        }
+    }
+</style>
+</head>
+
+<body id="body">
+
+<h1 id="demo">🎉 Happy New Year 2026 🎉</h1>
+<p>New Goals • New Opportunities • New Growth</p>
+
+<div>
+    <button id="dark">Dark</button>
+    <button id="light">Light</button>
+</div>
+
+<script>
+document.getElementById("dark").onclick = function(){
+    document.body.style.background = "linear-gradient(135deg, #000000, #434343)";
+    document.getElementById("demo").style.color = "#fff";
+    document.querySelector("p").style.color = "#f1f1f1";
+}
+
+document.getElementById("light").onclick = function(){
+    document.body.style.background = "linear-gradient(135deg, #fdfbfb, #ebedee)";
+    document.getElementById("demo").style.color = "#000";
+    document.querySelector("p").style.color = "#000";
+}
+</script>
+
+
+</body>
+</html>
